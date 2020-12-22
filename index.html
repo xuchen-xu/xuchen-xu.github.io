@@ -300,7 +300,68 @@
       
         
           
-            
+            <h3 id="1-作用域："><a href="#1-作用域：" class="headerlink" title="(1) 作用域："></a>(1) 作用域：</h3><p>ES5:全局作用域,局部(函数)作用域.</p>
+<p>ES6:全局作用域,局部(函数)作用域,块级作用域</p>
+<p>块级作用域:简单的理解就是一段代码是由一个大括号包裹起来的,那么,这个大括号里面就是一个块级作用域.</p>
+<p>代码块作用域不一样：</p>
+<p>块级作用域let和var的区别:</p>
+<p>let声明的变量仅在块级作用域内有效,而var声明的变量全局有效。</p>
+<h3 id="2-基本用法："><a href="#2-基本用法：" class="headerlink" title="(2) 基本用法："></a>(2) 基本用法：</h3><p>①声明变量用法不一样</p>
+<p>ES5:声明变量用var</p>
+<p>ES6:声明变量用let或者const</p>
+<p>③不允许重复声明</p>
+<p>  function test(){</p>
+<p>​    let a=1;</p>
+<p>​    let a=2;</p>
+<p> }//报错</p>
+<p>④不存在变量提升（预解析）</p>
+<p>   console.log(a)//报错 a is not defined</p>
+<p>   let a=1;</p>
+<h3 id="（3）ES6中：解构赋值："><a href="#（3）ES6中：解构赋值：" class="headerlink" title="（3）ES6中：解构赋值："></a>（3）ES6中：解构赋值：</h3><p>语法上就是赋值的作用。</p>
+<p>解构:左边一种结构，右边一种结构，左右一一对应进行赋值。</p>
+<h3 id="（4）ES6中新增了Symbol数据类型"><a href="#（4）ES6中新增了Symbol数据类型" class="headerlink" title="（4）ES6中新增了Symbol数据类型"></a>（4）ES6中新增了Symbol数据类型</h3><p>Symbol不可以new，之前的基本数据类型有6种：Undefined、Null、布尔值（Boolean）、字符串（String）、数值（Number）、对象（Object）。</p>
+<p>Symbol声明的变量是唯一的，意义在于减少命名冲突</p>
+<h3 id="（5）函数扩展中最重要的是：增加箭头函数-Arrow-functions："><a href="#（5）函数扩展中最重要的是：增加箭头函数-Arrow-functions：" class="headerlink" title="（5）函数扩展中最重要的是：增加箭头函数 Arrow functions："></a>（5）函数扩展中最重要的是：增加箭头函数 Arrow functions：</h3><p>(1).简化了代码形式，默认return表达式结果。</p>
+<p>(2).自动绑定语义this，即定义函数时的this。</p>
+<p>1．函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。</p>
+<p>2．不可以当作构造函数，也就是说，不可以使用new命令，否则会抛出一个错误。</p>
+<p>3．不可以使用arguments对象，该对象在函数体内不存在。如果要用，可以用 rest 参数代替。</p>
+<p>4．不可以使用yield命令，因此箭头函数不能用作 Generator 函数。</p>
+<p>this对象的指向是可变的，但是在箭头函数中，它是固定的，箭头函数使得this从“动态”变成“静态”。</p>
+<h3 id="（6）在字符串扩展中：模板字符串-反引号"><a href="#（6）在字符串扩展中：模板字符串-反引号" class="headerlink" title="（6）在字符串扩展中：模板字符串 反引号"></a>（6）在字符串扩展中：模板字符串 反引号</h3><p>let obj = {</p>
+<p>​    name:”zhangsan”,</p>
+<p>​    age:18</p>
+<p>  }</p>
+<p>  function fn(gender){</p>
+<p>​    return gender;</p>
+<p>  }</p>
+<p>  let str = <code>姓名$&#123;obj.name&#125;,年龄$&#123;obj.age&#125;,性别$&#123;fn(&#39;男&#39;)&#125;</code>;</p>
+<p>}</p>
+<h3 id="（7）ES6的模块化："><a href="#（7）ES6的模块化：" class="headerlink" title="（7）ES6的模块化："></a>（7）ES6的模块化：</h3><p>内置模块功能借鉴了CommonJS和AMD各自的优点：</p>
+<p>(1).具有CommonJS的精简语法、唯一导出出口(single exports)和循环依赖(cyclic dependencies)的特点。</p>
+<p>(2).类似AMD，支持异步加载和可配置的模块加载。</p>
+<p>在 ES6 之前，社区制定了一些模块加载方案，最主要的有 CommonJS 和 AMD 两种。前者用于服务器，后者用于浏览器。后面又有了es6模块化(export/import)。</p>
+<h3 id="（8）ES6的数据结构："><a href="#（8）ES6的数据结构：" class="headerlink" title="（8）ES6的数据结构："></a>（8）ES6的数据结构：</h3><p>Map + Set + WeakMap + WeakSet</p>
+<p>四种集合类型，WeakMap、WeakSet作为属性键的对象如果没有别的变量在引用它们，则会被回收释放掉。</p>
+<h5 id="Array和Set对比"><a href="#Array和Set对比" class="headerlink" title="Array和Set对比"></a>Array和Set对比</h5><p>1.在Set中我们不能像访问数组元素那样直接通过索引来访问集合中的元素，如有需要，需要先将Set转换为数组。 </p>
+<p>2.Array中的数组元素是可以重复的，Set中的数组元素不能重复 </p>
+<p>3.Array的key默认是索引值，value是数组内容；Set的key和value都是实际内容</p>
+<p><strong>Object**</strong>和**<strong>Map**</strong>区别**</p>
+<p>\1.  一个对象的键只能是字符串或者 Symbols，但一个 Map 的键可以是任意值，包括函数、对象、基本类型。</p>
+<p>\2.  Map 中的键值是有序的，而添加到对象中的键则不是。因此，当对它进行遍历时，Map对象是按插入的顺序返回键值。</p>
+<p>\3.  通过 size 属性直接获取一个 Map 的键值对个数，而 Object 的键值对个数只能手动计算。</p>
+<p>\4.  Map 在频繁增删键值对的场景下会有些性能优势。</p>
+<p>  <img src="file:///C:/Users/lenovo/AppData/Local/Temp/msohtmlclip1/01/clip_image002.jpg" alt="img"></p>
+<h3 id="（9）新增新的API"><a href="#（9）新增新的API" class="headerlink" title="（9）新增新的API"></a>（9）新增新的API</h3><p>​    Math + Number + String + Array + Object API</p>
+<h3 id="（10）-Proxies"><a href="#（10）-Proxies" class="headerlink" title="（10） Proxies"></a>（10） Proxies</h3><p>使用代理（Proxy）监听对象的操作，然后可以做一些相应事情。</p>
+<p>Proxy 可以理解成，在目标对象之前架设一层“拦截”，外界对该对象的访问，都必须先通过这层拦截，因此提供了一种机制，可以对外界的访问进行过滤和改写。Proxy 这个词的原意是代理，用在这里表示由它来“代理”某些操作，可以译为“代理器”。</p>
+<p>可监听的操作： get、set、has、deleteProperty、apply、construct、getOwnPropertyDescriptor、defineProperty、getPrototypeOf、setPrototypeOf、enumerate、ownKeys、preventExtensions、isExtensible。</p>
+<h3 id="（11）迭代器的不同"><a href="#（11）迭代器的不同" class="headerlink" title="（11）迭代器的不同"></a>（11）迭代器的不同</h3><p>ES6创造了一种新的遍历命令for…of循环，Iterator接口主要供for…of消费。在ES6中，有些数据结构原生具备Iterator接口（比如数组），即不用任何处理，就可以被for…of循环遍历，有些就不行（比如对象）。凡是部署了Symbol.iterator属性的数据结构，就称为部署了遍历器接口。调用这个接口，就会返回一个遍历器对象。</p>
+<p>在ES6中，有三类数据结构原生具备Iterator接口：数组、某些类似数组的对象、Set和Map结构。</p>
+<h3 id="（12）生成器是一种返回迭代器的函数"><a href="#（12）生成器是一种返回迭代器的函数" class="headerlink" title="（12）生成器是一种返回迭代器的函数"></a>（12）生成器是一种返回迭代器的函数</h3><p>通过function关键字后的星号(*)来表示，函数中会用到新的关键字yield，可以通过它来指定调用迭代器的next()方法时的返回值及返回顺序</p>
+<p>在 ES6 出现之前，基本都是各式各样类似Promise的解决方案来处理异步操作的代码逻辑，但 ES6 的Generator给异步操作提供了新的思路，</p>
+<h3 id="（13）Promises"><a href="#（13）Promises" class="headerlink" title="（13）Promises"></a>（13）Promises</h3><p>Promises是处理异步操作的对象，使用了 Promise 对象之后可以用一种链式调用的方式来组织代码，让代码更加直观（类似jQuery的deferred 对象）。</p>
+
           
         
       
