@@ -229,7 +229,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/22/WampServer-%E4%B8%BA%E6%A9%99%E8%89%B2-%E5%8F%AF%E8%83%BD%E7%9A%84%E5%8E%9F%E5%9B%A0/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/22/WampServer%20%E4%B8%80%E7%9B%B4%E4%B8%BA%E6%A9%99%E8%89%B2%20%5B%E5%8F%AF%E8%83%BD%E7%9A%84%E5%8E%9F%E5%9B%A0%5D/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -248,143 +248,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/12/22/WampServer-%E4%B8%BA%E6%A9%99%E8%89%B2-%E5%8F%AF%E8%83%BD%E7%9A%84%E5%8E%9F%E5%9B%A0/" itemprop="url">Untitled</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-12-22T16:33:26+08:00">
-                2020-12-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="WampServer-一直为橙色-可能的原因"><a href="#WampServer-一直为橙色-可能的原因" class="headerlink" title="WampServer 一直为橙色 [可能的原因]"></a>WampServer 一直为橙色 [可能的原因]</h1><h2 id="1-原因一-WampServer-的安装最好是默认安装-也就是C盘中-其次文件名不能有中文，因为它识别不了中文"><a href="#1-原因一-WampServer-的安装最好是默认安装-也就是C盘中-其次文件名不能有中文，因为它识别不了中文" class="headerlink" title="1.原因一:WampServer 的安装最好是默认安装(也就是C盘中),其次文件名不能有中文，因为它识别不了中文!"></a>1.原因一:WampServer 的安装最好是默认安装(也就是C盘中),其次文件名不能有中文，因为它识别不了中文!</h2><h2 id="2-原因二"><a href="#2-原因二" class="headerlink" title="2.原因二:"></a>2.<strong>原因二:</strong></h2><p>计算机管理中找到 SQL Server Reporting Services或者mysql服务，将它停止</p>
-<p> <img src="https://img-blog.csdnimg.cn/20181225193652845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzM3MjQ5Nzkx,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h2 id="3-原因三"><a href="#3-原因三" class="headerlink" title="3.原因三:"></a>3.<strong>原因三:</strong></h2><p>找到 Internet 信息服务(IIS管理) 菜单 如果在运行就停止它 </p>
-<p><img src="https://img-blog.csdnimg.cn/20181225193932474.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzM3MjQ5Nzkx,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h2 id="4-原因四："><a href="#4-原因四：" class="headerlink" title="4.原因四："></a>4.原因四：</h2><p>无法启动服务，原因可能是已被禁用或与其相关联的设备没有启动。</p>
-<p>Could not execute menu item (internal error)</p>
-<p>[Exception] Could not perform service action:</p>
-<p><img src="https://img-blog.csdnimg.cn/20181225194113991.png" alt="img"></p>
-<p>橙色的原因也在与，Apache没能开启。而Apache开启不了有可能是两个原因导致。</p>
-<p>**1):**端口号被占用</p>
-<p><img src="https://img-blog.csdnimg.cn/20181225194437183.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzM3MjQ5Nzkx,size_16,color_FFFFFF,t_70" alt="img"></p>
-<p>点击 httpd.conf文件 ctrl + f 查找  #Listen 开头的这段代码 </p>
-<p><img src="https://img-blog.csdnimg.cn/20181225194630194.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzM3MjQ5Nzkx,size_16,color_FFFFFF,t_70" alt="img"></p>
-<p>最后的8077是我自己设置的端口号 你可以改成自己想要的 注意两个都要改</p>
-<p>**2):**WampServer Apache没有开启</p>
-<p>同样是计算机管理 服务和应用程序 -&gt;服务 中找到 wampapache 设置为手动 or 自动</p>
-<p><img src="https://img-blog.csdnimg.cn/20181225195012766.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzM3MjQ5Nzkx,size_16,color_FFFFFF,t_70" alt="https://img-blog.csdnimg.cn/20181225195012766.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzM3MjQ5Nzkx,size_16,color_FFFFFF,t_70"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/22/%E6%88%91%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/12/22/%E6%88%91%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" itemprop="url">我个人博客的第一篇博客</a></h1>
+                <a class="post-title-link" href="/2020/12/22/WampServer%20%E4%B8%80%E7%9B%B4%E4%B8%BA%E6%A9%99%E8%89%B2%20%5B%E5%8F%AF%E8%83%BD%E7%9A%84%E5%8E%9F%E5%9B%A0%5D/" itemprop="url">WampServer 一直为橙色 [可能的原因]</a></h1>
         
 
         <div class="post-meta">
@@ -534,7 +398,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
