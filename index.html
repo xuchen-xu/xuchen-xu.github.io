@@ -1,804 +1,177 @@
-<!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="en">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-
-
-<meta property="og:type" content="website">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/null">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/null"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
 
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '',
-    scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
     }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://example.com/"/>
-
-
-
-
-
-  <title>Hexo</title>
-  
-
-
-
-
-
-
-
-
-<meta name="generator" content="Hexo 5.2.0"></head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-      
-        <p class="site-subtitle"></p>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/%20" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            Home
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/%20" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Archives
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/22/ES5%E5%92%8CES6%E8%AF%AD%E6%B3%95%E7%9A%84%E5%8C%BA%E5%88%AB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/12/22/ES5%E5%92%8CES6%E8%AF%AD%E6%B3%95%E7%9A%84%E5%8C%BA%E5%88%AB/" itemprop="url">ES5和ES6语法的区别</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-12-22T20:46:15+08:00">
-                2020-12-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="1-作用域："><a href="#1-作用域：" class="headerlink" title="(1) 作用域："></a>(1) 作用域：</h3><p>ES5:全局作用域,局部(函数)作用域.</p>
-<p>ES6:全局作用域,局部(函数)作用域,块级作用域</p>
-<p>块级作用域:简单的理解就是一段代码是由一个大括号包裹起来的,那么,这个大括号里面就是一个块级作用域.</p>
-<p>代码块作用域不一样：</p>
-<p>块级作用域let和var的区别:</p>
-<p>let声明的变量仅在块级作用域内有效,而var声明的变量全局有效。</p>
-<h3 id="2-基本用法："><a href="#2-基本用法：" class="headerlink" title="(2) 基本用法："></a>(2) 基本用法：</h3><p>①声明变量用法不一样</p>
-<p>ES5:声明变量用var</p>
-<p>ES6:声明变量用let或者const</p>
-<p>③不允许重复声明</p>
-<p>  function test(){</p>
-<p>​    let a=1;</p>
-<p>​    let a=2;</p>
-<p> }//报错</p>
-<p>④不存在变量提升（预解析）</p>
-<p>   console.log(a)//报错 a is not defined</p>
-<p>   let a=1;</p>
-<h3 id="（3）ES6中：解构赋值："><a href="#（3）ES6中：解构赋值：" class="headerlink" title="（3）ES6中：解构赋值："></a>（3）ES6中：解构赋值：</h3><p>语法上就是赋值的作用。</p>
-<p>解构:左边一种结构，右边一种结构，左右一一对应进行赋值。</p>
-<h3 id="（4）ES6中新增了Symbol数据类型"><a href="#（4）ES6中新增了Symbol数据类型" class="headerlink" title="（4）ES6中新增了Symbol数据类型"></a>（4）ES6中新增了Symbol数据类型</h3><p>Symbol不可以new，之前的基本数据类型有6种：Undefined、Null、布尔值（Boolean）、字符串（String）、数值（Number）、对象（Object）。</p>
-<p>Symbol声明的变量是唯一的，意义在于减少命名冲突</p>
-<h3 id="（5）函数扩展中最重要的是：增加箭头函数-Arrow-functions："><a href="#（5）函数扩展中最重要的是：增加箭头函数-Arrow-functions：" class="headerlink" title="（5）函数扩展中最重要的是：增加箭头函数 Arrow functions："></a>（5）函数扩展中最重要的是：增加箭头函数 Arrow functions：</h3><p>(1).简化了代码形式，默认return表达式结果。</p>
-<p>(2).自动绑定语义this，即定义函数时的this。</p>
-<p>1．函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。</p>
-<p>2．不可以当作构造函数，也就是说，不可以使用new命令，否则会抛出一个错误。</p>
-<p>3．不可以使用arguments对象，该对象在函数体内不存在。如果要用，可以用 rest 参数代替。</p>
-<p>4．不可以使用yield命令，因此箭头函数不能用作 Generator 函数。</p>
-<p>this对象的指向是可变的，但是在箭头函数中，它是固定的，箭头函数使得this从“动态”变成“静态”。</p>
-<h3 id="（6）在字符串扩展中：模板字符串-反引号"><a href="#（6）在字符串扩展中：模板字符串-反引号" class="headerlink" title="（6）在字符串扩展中：模板字符串 反引号"></a>（6）在字符串扩展中：模板字符串 反引号</h3><p>let obj = {</p>
-<p>​    name:”zhangsan”,</p>
-<p>​    age:18</p>
-<p>  }</p>
-<p>  function fn(gender){</p>
-<p>​    return gender;</p>
-<p>  }</p>
-<p>  let str = <code>姓名$&#123;obj.name&#125;,年龄$&#123;obj.age&#125;,性别$&#123;fn(&#39;男&#39;)&#125;</code>;</p>
-<p>}</p>
-<h3 id="（7）ES6的模块化："><a href="#（7）ES6的模块化：" class="headerlink" title="（7）ES6的模块化："></a>（7）ES6的模块化：</h3><p>内置模块功能借鉴了CommonJS和AMD各自的优点：</p>
-<p>(1).具有CommonJS的精简语法、唯一导出出口(single exports)和循环依赖(cyclic dependencies)的特点。</p>
-<p>(2).类似AMD，支持异步加载和可配置的模块加载。</p>
-<p>在 ES6 之前，社区制定了一些模块加载方案，最主要的有 CommonJS 和 AMD 两种。前者用于服务器，后者用于浏览器。后面又有了es6模块化(export/import)。</p>
-<h3 id="（8）ES6的数据结构："><a href="#（8）ES6的数据结构：" class="headerlink" title="（8）ES6的数据结构："></a>（8）ES6的数据结构：</h3><p>Map + Set + WeakMap + WeakSet</p>
-<p>四种集合类型，WeakMap、WeakSet作为属性键的对象如果没有别的变量在引用它们，则会被回收释放掉。</p>
-<h5 id="Array和Set对比"><a href="#Array和Set对比" class="headerlink" title="Array和Set对比"></a>Array和Set对比</h5><p>1.在Set中我们不能像访问数组元素那样直接通过索引来访问集合中的元素，如有需要，需要先将Set转换为数组。 </p>
-<p>2.Array中的数组元素是可以重复的，Set中的数组元素不能重复 </p>
-<p>3.Array的key默认是索引值，value是数组内容；Set的key和value都是实际内容</p>
-<p><strong>Object**</strong>和**<strong>Map**</strong>区别**</p>
-<p>\1.  一个对象的键只能是字符串或者 Symbols，但一个 Map 的键可以是任意值，包括函数、对象、基本类型。</p>
-<p>\2.  Map 中的键值是有序的，而添加到对象中的键则不是。因此，当对它进行遍历时，Map对象是按插入的顺序返回键值。</p>
-<p>\3.  通过 size 属性直接获取一个 Map 的键值对个数，而 Object 的键值对个数只能手动计算。</p>
-<p>\4.  Map 在频繁增删键值对的场景下会有些性能优势。</p>
-<p>  <img src="file:///C:/Users/lenovo/AppData/Local/Temp/msohtmlclip1/01/clip_image002.jpg" alt="img"></p>
-<h3 id="（9）新增新的API"><a href="#（9）新增新的API" class="headerlink" title="（9）新增新的API"></a>（9）新增新的API</h3><p>​    Math + Number + String + Array + Object API</p>
-<h3 id="（10）-Proxies"><a href="#（10）-Proxies" class="headerlink" title="（10） Proxies"></a>（10） Proxies</h3><p>使用代理（Proxy）监听对象的操作，然后可以做一些相应事情。</p>
-<p>Proxy 可以理解成，在目标对象之前架设一层“拦截”，外界对该对象的访问，都必须先通过这层拦截，因此提供了一种机制，可以对外界的访问进行过滤和改写。Proxy 这个词的原意是代理，用在这里表示由它来“代理”某些操作，可以译为“代理器”。</p>
-<p>可监听的操作： get、set、has、deleteProperty、apply、construct、getOwnPropertyDescriptor、defineProperty、getPrototypeOf、setPrototypeOf、enumerate、ownKeys、preventExtensions、isExtensible。</p>
-<h3 id="（11）迭代器的不同"><a href="#（11）迭代器的不同" class="headerlink" title="（11）迭代器的不同"></a>（11）迭代器的不同</h3><p>ES6创造了一种新的遍历命令for…of循环，Iterator接口主要供for…of消费。在ES6中，有些数据结构原生具备Iterator接口（比如数组），即不用任何处理，就可以被for…of循环遍历，有些就不行（比如对象）。凡是部署了Symbol.iterator属性的数据结构，就称为部署了遍历器接口。调用这个接口，就会返回一个遍历器对象。</p>
-<p>在ES6中，有三类数据结构原生具备Iterator接口：数组、某些类似数组的对象、Set和Map结构。</p>
-<h3 id="（12）生成器是一种返回迭代器的函数"><a href="#（12）生成器是一种返回迭代器的函数" class="headerlink" title="（12）生成器是一种返回迭代器的函数"></a>（12）生成器是一种返回迭代器的函数</h3><p>通过function关键字后的星号(*)来表示，函数中会用到新的关键字yield，可以通过它来指定调用迭代器的next()方法时的返回值及返回顺序</p>
-<p>在 ES6 出现之前，基本都是各式各样类似Promise的解决方案来处理异步操作的代码逻辑，但 ES6 的Generator给异步操作提供了新的思路，</p>
-<h3 id="（13）Promises"><a href="#（13）Promises" class="headerlink" title="（13）Promises"></a>（13）Promises</h3><p>Promises是处理异步操作的对象，使用了 Promise 对象之后可以用一种链式调用的方式来组织代码，让代码更加直观（类似jQuery的deferred 对象）。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/22/WampServer%20%E4%B8%80%E7%9B%B4%E4%B8%BA%E6%A9%99%E8%89%B2%20%5B%E5%8F%AF%E8%83%BD%E7%9A%84%E5%8E%9F%E5%9B%A0%5D/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/12/22/WampServer%20%E4%B8%80%E7%9B%B4%E4%B8%BA%E6%A9%99%E8%89%B2%20%5B%E5%8F%AF%E8%83%BD%E7%9A%84%E5%8E%9F%E5%9B%A0%5D/" itemprop="url">WampServer 一直为橙色 [可能的原因]</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-12-22T16:21:58+08:00">
-                2020-12-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="WampServer-一直为橙色-可能的原因"><a href="#WampServer-一直为橙色-可能的原因" class="headerlink" title="WampServer 一直为橙色 [可能的原因]"></a>WampServer 一直为橙色 [可能的原因]</h1><h2 id="1-原因一-WampServer-的安装最好是默认安装-也就是C盘中-其次文件名不能有中文，因为它识别不了中文"><a href="#1-原因一-WampServer-的安装最好是默认安装-也就是C盘中-其次文件名不能有中文，因为它识别不了中文" class="headerlink" title="1.原因一:WampServer 的安装最好是默认安装(也就是C盘中),其次文件名不能有中文，因为它识别不了中文!"></a>1.原因一:WampServer 的安装最好是默认安装(也就是C盘中),其次文件名不能有中文，因为它识别不了中文!</h2><h2 id="2-原因二"><a href="#2-原因二" class="headerlink" title="2.原因二:"></a>2.<strong>原因二:</strong></h2><p>计算机管理中找到 SQL Server Reporting Services或者mysql服务，将它停止</p>
-<p> <img src="https://img-blog.csdnimg.cn/20181225193652845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzM3MjQ5Nzkx,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h2 id="3-原因三"><a href="#3-原因三" class="headerlink" title="3.原因三:"></a>3.<strong>原因三:</strong></h2><p>找到 Internet 信息服务(IIS管理) 菜单 如果在运行就停止它 </p>
-<p><img src="https://img-blog.csdnimg.cn/20181225193932474.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzM3MjQ5Nzkx,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h2 id="4-原因四："><a href="#4-原因四：" class="headerlink" title="4.原因四："></a>4.原因四：</h2><p>无法启动服务，原因可能是已被禁用或与其相关联的设备没有启动。</p>
-<p>Could not execute menu item (internal error)</p>
-<p>[Exception] Could not perform service action:</p>
-<p><img src="https://img-blog.csdnimg.cn/20181225194113991.png" alt="img"></p>
-<p>橙色的原因也在与，Apache没能开启。而Apache开启不了有可能是两个原因导致。</p>
-<p>**1):**端口号被占用</p>
-<p><img src="https://img-blog.csdnimg.cn/20181225194437183.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzM3MjQ5Nzkx,size_16,color_FFFFFF,t_70" alt="img"></p>
-<p>点击 httpd.conf文件 ctrl + f 查找  #Listen 开头的这段代码 </p>
-<p><img src="https://img-blog.csdnimg.cn/20181225194630194.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzM3MjQ5Nzkx,size_16,color_FFFFFF,t_70" alt="img"></p>
-<p>最后的8077是我自己设置的端口号 你可以改成自己想要的 注意两个都要改</p>
-<p>**2):**WampServer Apache没有开启</p>
-<p>同样是计算机管理 服务和应用程序 -&gt;服务 中找到 wampapache 设置为手动 or 自动</p>
-<p><img src="https://img-blog.csdnimg.cn/20181225195012766.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzM3MjQ5Nzkx,size_16,color_FFFFFF,t_70" alt="https://img-blog.csdnimg.cn/20181225195012766.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzM3MjQ5Nzkx,size_16,color_FFFFFF,t_70"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-
-
-          </div>
-          
-
-
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name"></p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/%20%7C%7C%20archive">
-              
-                  <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">posts</span>
-                </a>
-              </div>
-            
-
-            
-
-            
-
-          </nav>
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
-
-  
-</div>
-
-
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
   }
-</script>
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-03-09 18:54:18'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/null" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a></div></div></div><hr/></div></div><div id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo</a></span><span id="menus"><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site-title">Hexo</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/12/22/ES5%E5%92%8CES6%E8%AF%AD%E6%B3%95%E7%9A%84%E5%8C%BA%E5%88%AB/" title="ES5和ES6语法的区别">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ES5和ES6语法的区别"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/22/ES5%E5%92%8CES6%E8%AF%AD%E6%B3%95%E7%9A%84%E5%8C%BA%E5%88%AB/" title="ES5和ES6语法的区别">ES5和ES6语法的区别</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-12-22T12:46:15.000Z" title="Created 2020-12-22 20:46:15">2020-12-22</time></span></div><div class="content">(1) 作用域：ES5:全局作用域,局部(函数)作用域.
+ES6:全局作用域,局部(函数)作用域,块级作用域
+块级作用域:简单的理解就是一段代码是由一个大括号包裹起来的,那么,这个大括号里面就是一个块级作用域.
+代码块作用域不一样：
+块级作用域let和var的区别:
+let声明的变量仅在块级作用域内有效,而var声明的变量全局有效。
+(2) 基本用法：①声明变量用法不一样
+ES5:声明变量用var
+ES6:声明变量用let或者const
+③不允许重复声明
+  function test(){
+​    let a=1;
+​    let a=2;
+ }//报错
+④不存在变量提升（预解析）
+   console.log(a)//报错 a is not defined
+   let a=1;
+（3）ES6中：解构赋值：语法上就是赋值的作用。
+解构:左边一种结构，右边一种结构，左右一一对应进行赋值。
+（4）ES6中新增了Symbol数据类型Symbol不可以new，之前的基本数据类型有6种：Undefined、Null、布尔值（Boolean）、字符串（String）、数值（Number）、 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/12/22/WampServer%20%E4%B8%80%E7%9B%B4%E4%B8%BA%E6%A9%99%E8%89%B2%20%5B%E5%8F%AF%E8%83%BD%E7%9A%84%E5%8E%9F%E5%9B%A0%5D/" title="WampServer 一直为橙色 [可能的原因]">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="WampServer 一直为橙色 [可能的原因]"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/22/WampServer%20%E4%B8%80%E7%9B%B4%E4%B8%BA%E6%A9%99%E8%89%B2%20%5B%E5%8F%AF%E8%83%BD%E7%9A%84%E5%8E%9F%E5%9B%A0%5D/" title="WampServer 一直为橙色 [可能的原因]">WampServer 一直为橙色 [可能的原因]</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-12-22T08:21:58.000Z" title="Created 2020-12-22 16:21:58">2020-12-22</time></span></div><div class="content">WampServer 一直为橙色 [可能的原因]1.原因一:WampServer 的安装最好是默认安装(也就是C盘中),其次文件名不能有中文，因为它识别不了中文!2.原因二:计算机管理中找到 SQL Server Reporting Services或者mysql服务，将它停止
+ 
+3.原因三:找到 Internet 信息服务(IIS管理) 菜单 如果在运行就停止它 
+
+4.原因四：无法启动服务，原因可能是已被禁用或与其相关联的设备没有启动。
+Could not execute menu item (internal error)
+[Exception] Could not perform service action:
+
+橙色的原因也在与，Apache没能开启。而Apache开启不了有可能是两个原因导致。
+**1):**端口号被占用
+
+点击 httpd.conf文件 ctrl + f 查找  #Listen 开头的这段代码 
 
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
-</body>
-</html>
+最后的8077是我自己设置的端口号 你可以改成自己想要的 注意两个都要改
+**2):**WampServer Apache没有开启
+同样是计算机管理 服务和应 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/null" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2020/12/22/ES5%E5%92%8CES6%E8%AF%AD%E6%B3%95%E7%9A%84%E5%8C%BA%E5%88%AB/" title="ES5和ES6语法的区别"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ES5和ES6语法的区别"/></a><div class="content"><a class="title" href="/2020/12/22/ES5%E5%92%8CES6%E8%AF%AD%E6%B3%95%E7%9A%84%E5%8C%BA%E5%88%AB/" title="ES5和ES6语法的区别">ES5和ES6语法的区别</a><time datetime="2020-12-22T12:46:15.000Z" title="Created 2020-12-22 20:46:15">2020-12-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/12/22/WampServer%20%E4%B8%80%E7%9B%B4%E4%B8%BA%E6%A9%99%E8%89%B2%20%5B%E5%8F%AF%E8%83%BD%E7%9A%84%E5%8E%9F%E5%9B%A0%5D/" title="WampServer 一直为橙色 [可能的原因]"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="WampServer 一直为橙色 [可能的原因]"/></a><div class="content"><a class="title" href="/2020/12/22/WampServer%20%E4%B8%80%E7%9B%B4%E4%B8%BA%E6%A9%99%E8%89%B2%20%5B%E5%8F%AF%E8%83%BD%E7%9A%84%E5%8E%9F%E5%9B%A0%5D/" title="WampServer 一直为橙色 [可能的原因]">WampServer 一直为橙色 [可能的原因]</a><time datetime="2020-12-22T08:21:58.000Z" title="Created 2020-12-22 16:21:58">2020-12-22</time></div></div></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">December 2020</span><span class="card-archive-list-count">2</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-03-09T10:54:18.461Z"></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
