@@ -1,0 +1,308 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>XcandyのBlog</title><meta name="author" content="XuChen"><meta name="copyright" content="XuChen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta property="og:type" content="website">
+<meta property="og:title" content="XcandyのBlog">
+<meta property="og:url" content="http://example.com/page/2/index.html">
+<meta property="og:site_name" content="XcandyのBlog">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/zhoushen.png">
+<meta property="article:author" content="XuChen">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/zhoushen.png"><link rel="shortcut icon" href="/img/weblogo.png"><link rel="canonical" href="http://example.com/page/2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-03-22 21:13:57'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><link rel="stylesheet" href="/css/caidai.css"><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="XcandyのBlog" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/zhoushen.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://img-blog.csdnimg.cn/20210311212239663.png#pic_center)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">XcandyのBlog</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site-title">XcandyのBlog</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/10/13/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E4%B8%8E%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86DOM-%E9%80%92%E5%BD%92%E4%B8%8E%E9%9D%9E%E9%80%92%E5%BD%92/" title="深度优先与广度优先遍历DOM(递归与非递归)">     <img class="post_bg" src="https://guixueting.github.io/img/03.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="深度优先与广度优先遍历DOM(递归与非递归)"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/10/13/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E4%B8%8E%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86DOM-%E9%80%92%E5%BD%92%E4%B8%8E%E9%9D%9E%E9%80%92%E5%BD%92/" title="深度优先与广度优先遍历DOM(递归与非递归)">深度优先与广度优先遍历DOM(递归与非递归)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-10-13T10:12:12.000Z" title="发表于 2020-10-13 18:12:12">2020-10-13</time></span></div><div class="content">深度优先与广度优先遍历DOM(递归与非递归)若存在以下的DOM树结构我们改如何遍历所有的DOM节点;
+1234567891011121314151617181920212223242526272829&lt;div id=&quot;root&quot;&gt;    &lt;div&gt;        &lt;p&gt;            &lt;span&gt;&lt;/span&gt;        &lt;/p&gt;        &lt;h1&gt;        &lt;/h1&gt;        &lt;div&gt;            &lt;p&gt;                &lt;span&gt;&lt;/span&gt;            &lt;/p&gt;            &lt;p&gt;                &lt;span&gt;&lt;/span&gt;            &lt;/p&gt;        &lt;/div&gt;    &lt;/div&gt;    &lt;div&gt;        ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/10/08/Express%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%90%AD%E5%BB%BA/" title="Express服务器的搭建">     <img class="post_bg" src="https://guixueting.github.io/img/10.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Express服务器的搭建"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/10/08/Express%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%90%AD%E5%BB%BA/" title="Express服务器的搭建">Express服务器的搭建</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-10-08T06:05:44.000Z" title="发表于 2020-10-08 14:05:44">2020-10-08</time></span></div><div class="content">Express是基于Node.js平台，快速、开放极简的web开发框架
+初始化
+1npm init -y  //加-y时 会以默认参数创建package.json文件   若不加 可以自定义package.json参数信息
+安装
+1npm install express -save
+自动重启服务器工具
+1npm install nodemon  //若要使用该工具  在启动服务器时要使用nodemon命令 如 nodemon ./server.js
+路径的匹配
+123456//匹配student开头，而且后面跟了学号   http://localhost:8000/student/1234app.get(&quot;/student/:id/:name&quot;,function(req,res)&#123;    var id = req.params[&quot;id&quot;];    var name = req.params[&quot;name&quot;];    res.send(id+name);&#125;);
+中间件的另一种使用方式12345678910111 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/10/04/Vuex%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/" title="Vuex使用详解">     <img class="post_bg" src="https://guixueting.github.io/img/03.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vuex使用详解"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/10/04/Vuex%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/" title="Vuex使用详解">Vuex使用详解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-10-04T13:10:51.000Z" title="发表于 2020-10-04 21:10:51">2020-10-04</time></span></div><div class="content">什么情况下应该使用 Vuex？Vuex 可以帮助我们管理共享状态，并附带了更多的概念和框架。这需要对短期和长期效益进行权衡。
+如果不打算开发大型单页应用，应用够简单，最好不要使用 Vuex。一个简单的store模式就足够了。但是，如果需要构建一个中大型单页应用，就要考虑如何更好地在组件外部管理状态，Vuex 是不错的选择。
+使用在 Vue 的单页面应用中使用，需要使用Vue.use(Vuex)调用插件。将其注入到Vue根实例中。
+12345678910111213141516171819202122232425262728293031import Vuex from &#x27;vuex&#x27;Vue.use(Vuex)const store = new Vuex.Store(&#123;  state: &#123;    count: 0  &#125;,  getters: &#123;    doneTodos: (state, getters) =&gt; &#123;      return state.todos.filter(todo =&gt; todo.done ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/08/08/ES6%E6%96%B0%E7%89%B9%E6%80%A7/" title="ES6新特性">     <img class="post_bg" src="https://fech.in/static/images/cover/javascript-dom-utils.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ES6新特性"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/08/ES6%E6%96%B0%E7%89%B9%E6%80%A7/" title="ES6新特性">ES6新特性</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-08-08T12:42:37.000Z" title="发表于 2020-08-08 20:42:37">2020-08-08</time></span></div><div class="content">ES6新特性ES6 = ECMAScript 6
+申明变量let和constlet
+let申明变量不存在预解析；
+123console.log(flag);let flag = 123;//结果：报错
+
+let声明的变量不允许重复
+123let flag = 123;let flag = 456;console.log(flag);
+
+ES6引入了块级作用域块内部定义的变量，在外部无法访问(PS: 只要被 { } 包裹起来，就形成块级作用域)
+12345if (true)&#123;    let flag = 123;&#125;console.log(flag);
+
+let必须先声明在使用因为用let申明的变量没有预解析
+123tem = 123;let tem;  //报错
+
+
+
+constconst声明的常量不能被重新赋值，且在申明的同时就要被初始化
+123const n = 1;//申明的同时就要初始化n = 2;//此处报错
+
+变量的结构赋值数组的解构赋值123456// var a =1,b=2,c=3;//js中的写法let [a,b,c] = [1,2,3];//no ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/06/18/Less/" title="Less">     <img class="post_bg" src="https://guixueting.github.io/img/12.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Less"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/06/18/Less/" title="Less">Less</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-18T12:31:03.000Z" title="发表于 2020-06-18 20:31:03">2020-06-18</time></span></div><div class="content">Lessless是动态的样式表语言，通过简明的语法定义，使编写cs’s的工作变得非常简单，本质上，less包含一套自定义的语法以及i一个解析器。
+安装1、安装Nodejs环境
+2、cmd中执行
+1npm install -g less
+
+3、验证
+1lessc -v    &#x2F;&#x2F;若正确出现less版本号则安装成功
+
+使用less编译 先创建一个less文件 demo.less
+1234@color: #ccc;div &#123;	color: @color;&#125;
+
+ 在当前目录下运行cmd，输入
+1lessc demo.less demo.css
+
+运行之后会在当前目录下生成一个demo.css文件，内容为
+123div &#123;  color: #ccc;&#125;
+
+VsCode中使用less 1、添加 Easy Less 扩展插件，安装，安装完后最好重启一次VSCode；
+ 2、在需要生成css文件的地方，新建一个.less文件；
+ 3、保存后，会在同级目录下自动生成一个同名css文件
+less的基本语法注释12&#x2F;*注释*&#x2F;  ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/05/05/Uniapp%E5%AE%9E%E7%8E%B0%E5%A4%9A%E7%AB%AF%E5%BC%80%E5%8F%91/" title="Uniapp实现多端开发">     <img class="post_bg" src="https://guixueting.github.io/img/10.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Uniapp实现多端开发"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/05/05/Uniapp%E5%AE%9E%E7%8E%B0%E5%A4%9A%E7%AB%AF%E5%BC%80%E5%8F%91/" title="Uniapp实现多端开发">Uniapp实现多端开发</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-05-05T06:04:52.000Z" title="发表于 2020-05-05 14:04:52">2020-05-05</time></span></div><div class="content">#1.uni-app的基本使用
+课程介绍：
+基础部分：
+
+环境搭建
+页面外观配置
+数据绑定
+uni-app的生命周期
+组件的使用
+uni-app中样式学习
+在uni-app中使用字体图标和开启scss
+条件注释跨端兼容
+uni中的事件
+导航跳转
+组件创建和通讯，及组件的生命周期
+uni-app中使用uni-ui库
+
+项目：极客商城项目
+1.1 uni-app介绍 官方网页uni-app 是一个使用 Vue.js 开发所有前端应用的框架，开发者编写一套代码，可发布到iOS、Android、H5、以及各种小程序（微信/支付宝/百度/头条/QQ/钉钉）等多个平台。
+即使不跨端，uni-app同时也是更好的小程序开发框架。
+具有vue和微信小程序的开发经验，可快速上手uni-app
+为什么要去学习uni-app？
+相对开发者来说，减少了学习成本，因为只学会uni-app之后，即可开发出iOS、Android、H5、以及各种小程序的应用，不需要再去学习开发其他应用的框架，相对公司而言，也大大减少了开发成本。
+1.2 环境搭建安装编辑器HbuilderX 下载地址
+HBuilderX是通用的前端开 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/04/11/npm%E7%9A%84%E5%88%9D%E6%AD%A5%E8%A7%81%E8%A7%A3/" title="npm的初步见解">     <img class="post_bg" src="https://guixueting.github.io/img/03.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="npm的初步见解"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/04/11/npm%E7%9A%84%E5%88%9D%E6%AD%A5%E8%A7%81%E8%A7%A3/" title="npm的初步见解">npm的初步见解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-04-11T00:24:41.000Z" title="发表于 2020-04-11 08:24:41">2020-04-11</time></span></div><div class="content">npm的初步见解一. 包管理工具1.1. 认识npm我们已经学习了在JavaScript中可以通过模块化的方式将代码划分成一个个小的结构：
+
+在以后的开发中我们就可以通过模块化的方式来封装自己的代码，并且封装成一个工具；
+这个工具我们可以让同事通过导入的方式来使用，甚至你可以分享给世界各地的程序员来使用；
+
+如果我们分享给世界上所有的程序员使用，有哪些方式呢？
+方式一：上传到GitHub上、其他程序员通过GitHub下载我们的代码手动的引用；
+
+缺点是大家必须知道你的代码GitHub的地址，并且从GitHub上手动下载；
+需要在自己的项目中手动的引用，并且管理相关的依赖；
+不需要使用的时候，需要手动来删除相关的依赖；
+当遇到版本升级或者切换时，需要重复上面的操作；
+
+显然，上面的方式是有效的，但是这种传统的方式非常麻烦，并且容易出错；
+方式二：使用一个专业的工具来管理我们的代码
+
+我们通过工具将代码发布到特定的位置；
+其他程序员直接通过工具来安装、升级、删除我们的工具代码；
+
+显然，通过第二种方式我们可以更好的管理自己的工具包，其他人也可以更好的使用我们的工具包。
+包管理工具npm：
+ ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/03/11/creat-react-app/" title="creat-react-app">     <img class="post_bg" src="https://guixueting.github.io/img/03.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="creat-react-app"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/03/11/creat-react-app/" title="creat-react-app">creat-react-app</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-03-11T12:53:35.000Z" title="发表于 2020-03-11 20:53:35">2020-03-11</time></span></div><div class="content">1、初始化React App1.1、安装12# 全局安装npm install -g create-react-app
+
+1.2、创建一个app项目12# 构建一个my-app的项目npm init react-app my-app
+
+1.3、启动编译1npm start
+
+2、webpack配置2.1、react-app-rewired
+使用 react-app-rewired 添加或修改 webpack 的 配置
+
+2.1.1、安装1npm i react-app-rewired --save-dev
+
+2.1.2、修改package.json123456&quot;scripts&quot;: &#123;    &quot;start&quot;: &quot;react-app-rewired start&quot;,    &quot;build&quot;: &quot;react-app-rewired build&quot;,    &quot;test&quot;: &quot;react-app-rewired test&quot;,    &quot;eject ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/03/09/%E5%8E%BB%E9%87%8D%E7%AE%97%E6%B3%95/" title="去重算法">     <img class="post_bg" src="https://guixueting.github.io/img/09.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="去重算法"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/03/09/%E5%8E%BB%E9%87%8D%E7%AE%97%E6%B3%95/" title="去重算法">去重算法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-03-09T01:31:24.000Z" title="发表于 2020-03-09 09:31:24">2020-03-09</time></span></div><div class="content">1.遍历数组法它是最简单的数组去重方法（indexOf方法）
+实现思路：新建一个数组，遍历去要重的数组，当值不在新数组的时候（indexOf为-1）就加入该新数组中；
+12345678910var arr=[2,8,5,0,5,2,6,7,2];function unique1(arr)&#123;  var hash=[];  for (var i = 0; i &lt; arr.length; i++) &#123;     if(hash.indexOf(arr[i])==-1)&#123;      hash.push(arr[i]);     &#125;  &#125;  return hash;&#125;
+
+2.数组下标判断法调用indexOf方法，性能和方法1差不多
+实现思路：如果当前数组的第 i 项在当前数组中第一次出现的位置不是 i，那么表示第 i 项是重复的，忽略掉。否则存入结果数组。
+123456789function unique2(arr)&#123;  var hash=[];  for (var i = 0; i &lt; arr.length; i+ ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/02/20/npm%E5%92%8Cyarn/" title="npm和yarn">     <img class="post_bg" src="https://guixueting.github.io/img/08.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="npm和yarn"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/02/20/npm%E5%92%8Cyarn/" title="npm和yarn">npm和yarn</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-02-20T10:00:45.000Z" title="发表于 2020-02-20 18:00:45">2020-02-20</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/hexo/">hexo</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/git/">git</a></span></div><div class="content">Yarn是由Facebook、Google、Exponent 和 Tilde 联合推出了一个新的 JS 包管理工具 ，正如官方文档中写的，Yarn 是为了弥补 npm 的一些缺陷而出现的。
+
+
+
+
+
+
+一.npm常用的命令
+
+全局安装：默认安装在Node.js环境的node_modules目录下，全局安装的包一般用于命令行工具
+本地安装：一般用于开发某种具体的功能
+
+
+1、安装包（若不指定版本号 默认安装最新版本）
+12345npm install -g 安装包名称     （全局安装）npm install 安装包名称      （本地安装）例： npm install es-checker     &#x2F;&#x2F;安装es6
+
+
+
+2、卸载包
+12345npm uninstall -g 安装包名称     （全局卸载）npm uninstall 安装包名称      （本地卸载）例： npm uninstall es-checker     &#x2F;&#x2F;卸载es6
+
+
+
+3、更新包 （更新到最新版本号）
+1npm updata -g 安装包名称
+
+
+
+4、添加依 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/zhoushen.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">XuChen</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/03/16/React%E5%AE%9E%E7%8E%B0%E8%B4%AD%E7%89%A9%E8%BD%A6/" title="React实现购物车"><img src="https://fatshady.space/img/homebg3.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="React实现购物车"/></a><div class="content"><a class="title" href="/2021/03/16/React%E5%AE%9E%E7%8E%B0%E8%B4%AD%E7%89%A9%E8%BD%A6/" title="React实现购物车">React实现购物车</a><time datetime="2021-03-16T02:42:54.000Z" title="发表于 2021-03-16 10:42:54">2021-03-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/11/cookie-session/" title="cookie session"><img src="https://guixueting.github.io/img/09.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cookie session"/></a><div class="content"><a class="title" href="/2021/03/11/cookie-session/" title="cookie session">cookie session</a><time datetime="2021-03-11T14:38:25.000Z" title="发表于 2021-03-11 22:38:25">2021-03-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/11/ES6%E8%AF%AD%E6%B3%95/" title="ES6语法"><img src="https://guixueting.github.io/img/10.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ES6语法"/></a><div class="content"><a class="title" href="/2021/03/11/ES6%E8%AF%AD%E6%B3%95/" title="ES6语法">ES6语法</a><time datetime="2021-03-11T12:37:42.000Z" title="发表于 2021-03-11 20:37:42">2021-03-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/20/%E6%B5%85%E8%B0%88%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/" title="浅谈前端模块化"><img src="https://guixueting.github.io/img/03.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="浅谈前端模块化"/></a><div class="content"><a class="title" href="/2021/01/20/%E6%B5%85%E8%B0%88%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/" title="浅谈前端模块化">浅谈前端模块化</a><time datetime="2021-01-20T05:28:39.000Z" title="发表于 2021-01-20 13:28:39">2021-01-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/12/22/ES5%E5%92%8CES6%E8%AF%AD%E6%B3%95%E7%9A%84%E5%8C%BA%E5%88%AB/" title="ES5和ES6语法的区别"><img src="https://guixueting.github.io/img/08.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ES5和ES6语法的区别"/></a><div class="content"><a class="title" href="/2020/12/22/ES5%E5%92%8CES6%E8%AF%AD%E6%B3%95%E7%9A%84%E5%8C%BA%E5%88%AB/" title="ES5和ES6语法的区别">ES5和ES6语法的区别</a><time datetime="2020-12-22T12:46:15.000Z" title="发表于 2020-12-22 20:46:15">2020-12-22</time></div></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/React/"><span class="card-category-list-name">React</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF%E8%BF%9B%E9%98%B6/"><span class="card-category-list-name">前端进阶</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="card-category-list-name">数据库</span><span class="card-category-list-count">1</span></a></li>
+            
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/ES5/" style="font-size: 1.1em; color: #999">ES5</a> <a href="/tags/ES6/" style="font-size: 1.1em; color: #999">ES6</a> <a href="/tags/React/" style="font-size: 1.1em; color: #999">React</a> <a href="/tags/WampServer/" style="font-size: 1.1em; color: #999">WampServer</a> <a href="/tags/git/" style="font-size: 1.5em; color: #99a9bf">git</a> <a href="/tags/hexo/" style="font-size: 1.5em; color: #99a9bf">hexo</a> <a href="/tags/js%E8%AF%AD%E6%B3%95/" style="font-size: 1.1em; color: #999">js语法</a> <a href="/tags/mysql/" style="font-size: 1.1em; color: #999">mysql</a> <a href="/tags/vue/" style="font-size: 1.3em; color: #99a1ac">vue</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 1.1em; color: #999">数组</a> <a href="/tags/%E6%96%B0%E6%8A%80%E6%9C%AF/" style="font-size: 1.3em; color: #99a1ac">新技术</a> <a href="/tags/%E6%B5%AE%E5%8A%A8/" style="font-size: 1.1em; color: #999">浮动</a> <a href="/tags/%E7%B1%BB%E7%BB%84%E4%BB%B6/" style="font-size: 1.1em; color: #999">类组件</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/10/"><span class="card-archive-list-date">十月 2020</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/08/"><span class="card-archive-list-date">八月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/06/"><span class="card-archive-list-date">六月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/05/"><span class="card-archive-list-date">五月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item more is-center"><a class="card-archive-list-link-more" href="/archives/">
+              <span>查看更多</span><i class="fas fa-angle-right"  ></i></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">29</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-03-22T13:13:56.107Z"></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By XuChen</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script>function subtitleType () {
+  if (true) { 
+    var typed = new Typed("#subtitle", {
+      strings: "今日事&#44;今日毕,业精于勤荒于嬉&#44;行成于思毁于随,满招损&#44;谦受益,Never put off till tomorrow what you can do today,Love is wise&#44;and hatred is foolish,That man is the richest whose pleasure are the cheapest.,Genius only means hard-working all one's life.".split(","),
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = '今日事&#44;今日毕'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') subtitleType()
+  else $.getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js', subtitleType)
+} else {
+  subtitleType()
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script></div></body></html>
